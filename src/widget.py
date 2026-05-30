@@ -15,8 +15,6 @@ def mask_account_card(card_or_account):
         return 'Данные введены некорректно'
 
 
-#print(mask_account_card('Счет 6468647367889477'))
-
 def get_date(date_iso):
     dt = datetime.fromisoformat(date_iso)
     formatted_date = dt.strftime("%d.%m.%Y")
