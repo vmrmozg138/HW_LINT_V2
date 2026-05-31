@@ -1,18 +1,19 @@
 from masks import *
 from datetime import datetime
 
-card_names = ['Maestro','MasterCard','Visa Classic', 'Visa Platinum', 'Visa Gold']
+
 def mask_account_card(card_or_account):
+    """функция для маскировки номера карты или счета в введенной строке"""
     name, number = card_or_account.strip().rsplit(" ", maxsplit=1)
 
-    #print(f'name: {name}, number: {number}')
+    # print(f'name: {name}, number: {number}')
 
-    if name in card_names and len(number) == 16:
-        return card_or_account.replace(number, get_mask_card_number(number))
-    elif name.lower() == 'счет' and len(number) == 20:
+    if name.lower() == "счет" and len(number) == 20:
         return card_or_account.replace(number, get_mask_account(number))
+    elif name.lower() != "счет" and len(number) == 16:
+        return card_or_account.replace(number, get_mask_card_number(number))
     else:
-        return 'Данные введены некорректно'
+        return "Данные введены некорректно"
 
 
 def get_date(date_iso):
