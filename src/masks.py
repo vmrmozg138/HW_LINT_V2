@@ -1,4 +1,4 @@
-def get_mask_card_number(card_number):
+def git (card_number):
     """функция для маскирования номера карты"""
     if card_number.isdigit():
         raw_str_card_number = str(card_number).replace(" ", "")
