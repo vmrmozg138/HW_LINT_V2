@@ -19,12 +19,12 @@ def mask_account_card(card_or_account):
 
 def get_date(date_iso: str):
     """функция для приведения даты из ISO к формату ДД.ММ.ГГГГ"""
-    if(date_iso == ''):
+    if date_iso == "":
         return None
     else:
         try:
             dt = datetime.fromisoformat(date_iso)
             formatted_date = dt.strftime("%d.%m.%Y")
             return formatted_date
-        except:
+        except Exception:
             return None
