@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from masks import get_mask_account, get_mask_card_number
+from src.masks import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(card_or_account):
@@ -17,8 +17,14 @@ def mask_account_card(card_or_account):
         return "Данные введены некорректно"
 
 
-def get_date(date_iso):
+def get_date(date_iso: str):
     """функция для приведения даты из ISO к формату ДД.ММ.ГГГГ"""
-    dt = datetime.fromisoformat(date_iso)
-    formatted_date = dt.strftime("%d.%m.%Y")
-    return formatted_date
+    if date_iso == "":
+        return None
+    else:
+        try:
+            dt = datetime.fromisoformat(date_iso)
+            formatted_date = dt.strftime("%d.%m.%Y")
+            return formatted_date
+        except Exception:
+            return None
