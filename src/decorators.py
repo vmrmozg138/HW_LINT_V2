@@ -4,6 +4,7 @@ from time import time
 def log(filename=None):
     def my_decorator(func):
         def wrapper(*args, **kwargs):
+            '''Декоратор для логирования выполнеия функции- логируется время, а в случае ошибки - наименование ошибки и аргументы функции, вызов с которыми привел к ошибке'''
             time_1 = time()
             try:
                 result = func(*args, **kwargs)
