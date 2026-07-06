@@ -1,4 +1,6 @@
 from src.widget import mask_account_card, get_date
+from src.generators import *
+from tests.conftest import transactions_all, transactions_dscr_all
 
 widget_raw_data = '''Maestro 1596837868705199
 Счет 64686473678894779589
@@ -13,3 +15,6 @@ widget_test_data = ','.join(f'(\'{wrd}\', \'{mask_account_card(wrd)}\')' for wrd
 print(widget_test_data)
 
 print(get_date('2024-13-11T02:26:18.671407'))
+
+td = list(transaction_descriptions(transactions_all))
+print(td)
