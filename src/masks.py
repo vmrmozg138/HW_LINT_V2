@@ -1,7 +1,7 @@
 import logging
 
 logger = logging.getLogger("masks")
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
 file_handler = logging.FileHandler("logs/masks.log", mode="w")
 file_formatter = logging.Formatter(
     "%(asctime)s - %(name)s - %(levelname)s: %(message)s"

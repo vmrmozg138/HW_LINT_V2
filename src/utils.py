@@ -6,7 +6,7 @@ from src.external_api import convert_to_rub
 url = "https://marketplace.apilayer.com/exchangerates_data-api"
 
 logger = logging.getLogger("utils")
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
 file_handler = logging.FileHandler("logs/utils.log", mode="w")
 formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 file_formatter = logging.Formatter(
