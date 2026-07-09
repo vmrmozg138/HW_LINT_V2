@@ -28,11 +28,11 @@ def set_file_path(file_name):
     return str(DATA_DIR / "data" / file_name)
 
 
-def get_transactions(file_name):
+def get_transactions(file_path):
     """функция для добычи транзакций из json"""
-    with open(set_file_path(file_name), "r", encoding="utf-8") as f:
+    with open(file_path, "r", encoding="utf-8") as f:
         transactions = json.load(f)
-        logger.info(f"Загружено {len(transactions)} транзакций из {file_name}")
+        logger.info(f"Загружено {len(transactions)} транзакций из {file_path}")
         return transactions
 
 
@@ -56,16 +56,16 @@ def get_transaction_summ_rub(transaction) -> str:
         return ""
 
 
-def get_transactions_csv(file_name) -> list[dict]:
+def get_transactions_csv(file_path) -> list[dict]:
     """функция для считывания транзакций из csv"""
-    with open(set_file_path(file_name), "r", encoding="utf-8") as f:
+    with open(file_path, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
-        logger.info(f"Считаны транзакции из файла {file_name}")
+        logger.info(f"Считаны транзакции из файла {file_path}")
         return list(reader)
 
 
-def get_transaction_excel(file_name):
-    """функция считывает excel, возвращает dataframe"""
-    excel_data = pd.read_excel(set_file_path(file_name))
-    logger.info(f"Считаны транзакции из файла {file_name}")
-    return excel_data
+def get_transaction_excel(file_path) -> list[dict]:
+    """функция считывает excel, возвращает список словарей"""
+    excel_data = pd.read_excel(file_path)
+    logger.info(f"Считаны транзакции из файла {file_path}")
+    return excel_data.to_dict("records")
