@@ -1,6 +1,6 @@
 def filter_by_currency(lst, currency):
     """Функция для фильтрации списка входных операций по заданной валюте(если в данных нет указанной в агрументе валюты, то вернет None)"""
-    return filter(
+    return list(filter(
         lambda x: (
             x["operationAmount"]["currency"]["code"] == currency
             if (
@@ -11,7 +11,7 @@ def filter_by_currency(lst, currency):
             else None
         ),
         lst,
-    )
+    ))
 
 
 def transaction_descriptions(lst):

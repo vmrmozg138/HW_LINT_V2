@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15e753dc-7727-4214-bcbe-1ab800f3423d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.bak/HW_LINT_V2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.bak/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.bak/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.bak/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.bak/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/masks.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/masks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/processing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
-    </list>
+    <list default="true" id="15e753dc-7727-4214-bcbe-1ab800f3423d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,17 +49,20 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python tests.pytest in test_decorators.py.executor": "Run",
+    "Python tests.pytest in test_external_api.py.executor": "Run",
+    "Python tests.pytest in test_utils.py.executor": "Run",
+    "Python.external_api.executor": "Run",
     "Python.generators.executor": "Run",
     "Python.help_script.executor": "Run",
+    "Python.hs_2.executor": "Run",
     "Python.main.executor": "Run",
-    "Python.masks.executor": "Run",
+    "Python.utils.executor": "Run",
     "Python.widget.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature__8/re__random__collections",
-    "settings.editor.selected.configurable": "DSTables"
+    "git-widget-placeholder": "develop",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="SharedIndexes">

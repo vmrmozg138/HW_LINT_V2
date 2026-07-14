@@ -1,8 +1,12 @@
 import logging
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "logs"
 
 logger = logging.getLogger("masks")
 logger.setLevel(logging.DEBUG)
-file_handler = logging.FileHandler("logs/masks.log", mode="w")
+file_handler = logging.FileHandler(str(DATA_DIR / "masks.log"), mode="w")
 file_formatter = logging.Formatter(
     "%(asctime)s - %(name)s - %(levelname)s: %(message)s"
 )

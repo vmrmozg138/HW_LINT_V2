@@ -4,7 +4,7 @@ def filter_by_state(
     """Функция сортирует поданный на вход список словарей,
     оставляет только те, у кого значение по ключу state совпадает с указанным во втором аргументе
     (по умолчанию - EXECUTED)"""
-    return list(filter(lambda d: d["state"] == state, dicts_list))
+    return list(filter(lambda d: d.get("state") == state, dicts_list))
 
 
 def sort_by_date(

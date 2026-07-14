@@ -2,6 +2,8 @@ import csv
 import json
 import logging
 from pathlib import Path
+import re
+from collections import Counter
 
 import pandas as pd
 
@@ -69,3 +71,16 @@ def get_transaction_excel(file_path) -> list[dict]:
     excel_data = pd.read_excel(file_path)
     logger.info(f"Считаны транзакции из файла {file_path}")
     return excel_data.to_dict("records")
+
+def process_bank_search(data:list[dict], search:str)->list[dict]:
+    pattern = re.compile(search)
+    return [item for item in data if item.get("description") is not None and pattern.search(item["description"])]
+
+def process_bank_operations(data:list[dict], categories:list)->dict:
+    filtered_descriptions = []
+    for category in categories:
+        filtered_descriptions.extend(process_bank_search(data, category))
+    return Counter([item("description") for item in filtered_descriptions])
+
+
+
