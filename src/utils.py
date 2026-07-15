@@ -2,10 +2,13 @@ import csv
 import json
 import logging
 from pathlib import Path
+import re
+from collections import Counter
 
 import pandas as pd
 
 from src.external_api import convert_to_rub
+from src.generators import transaction_descriptions
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "logs"
@@ -69,3 +72,15 @@ def get_transaction_excel(file_path) -> list[dict]:
     excel_data = pd.read_excel(file_path)
     logger.info(f"Считаны транзакции из файла {file_path}")
     return excel_data.to_dict("records")
+
+def process_bank_search(data:list[dict], search:str)->list[dict]:
+    """функция для поиска операций по части описания"""
+    pattern = re.compile(search)
+    return [item for item in data if item.get("description") is not None and pattern.search(item["description"])]
+
+def process_bank_operations(data:list[dict], categories:list)->dict:
+    """функция для подсчета и группировки операций по категориям"""
+    return Counter([item for item in list(transaction_descriptions(data)) if item is not None and any(cat in item for cat in categories)])
+
+
+
