@@ -1,9 +1,13 @@
 from pathlib import Path
 
 from src.generators import filter_by_currency
-from src.masks import get_mask_account, get_mask_card_number
-from src.processing import *
-from src.utils import *
+from src.processing import filter_by_state, sort_by_date
+from src.utils import (
+    get_transactions,
+    get_transactions_csv,
+    process_bank_search,
+    get_transaction_excel,
+)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
@@ -20,7 +24,6 @@ def main():
 
     yes_no_answers = {"да": True, "нет": False}
     asc_desc_answers = {"по возрастанию": False, "по убыванию": True}
-
     hello_string = """Привет! Добро пожаловать в программу работы 
 с банковскими транзакциями. 
 Выберите необходимый пункт меню:
@@ -97,7 +100,8 @@ def main():
 условия фильтрации""")
                 else:
                     print(
-                        f"""Распечатываю итоговый список транзакций...\n\nВсего банковских операций в выборке: {len(list(transactions))}"""
+                        f"""Распечатываю итоговый список транзакций...\n
+                        Всего банковских операций в выборке: {len(list(transactions))}"""
                     )
                     for transaction in list(transactions):
                         print(transaction)

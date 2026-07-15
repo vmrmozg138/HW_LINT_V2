@@ -8,6 +8,7 @@ from collections import Counter
 import pandas as pd
 
 from src.external_api import convert_to_rub
+from src.generators import transaction_descriptions
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "logs"
@@ -73,14 +74,13 @@ def get_transaction_excel(file_path) -> list[dict]:
     return excel_data.to_dict("records")
 
 def process_bank_search(data:list[dict], search:str)->list[dict]:
+    """функция для поиска операций по части описания"""
     pattern = re.compile(search)
     return [item for item in data if item.get("description") is not None and pattern.search(item["description"])]
 
 def process_bank_operations(data:list[dict], categories:list)->dict:
-    filtered_descriptions = []
-    for category in categories:
-        filtered_descriptions.extend(process_bank_search(data, category))
-    return Counter([item("description") for item in filtered_descriptions])
+    """функция для подсчета и группировки операций по категориям"""
+    return Counter([item for item in transaction_descriptions(data) if any(cat in item for cat in categories)])
 
 
 

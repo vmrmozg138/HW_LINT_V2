@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15e753dc-7727-4214-bcbe-1ab800f3423d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.bak/HW_LINT_V2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.bak/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.bak/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.bak/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.bak/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/masks.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/masks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/processing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +63,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature__8/re__random__collections",
+    "git-widget-placeholder": "#8 on feature__8/re__random__collections",
     "settings.editor.selected.configurable": "DSTables"
   }
 }]]></component>
