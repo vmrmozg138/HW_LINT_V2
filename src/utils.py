@@ -80,7 +80,7 @@ def process_bank_search(data:list[dict], search:str)->list[dict]:
 
 def process_bank_operations(data:list[dict], categories:list)->dict:
     """функция для подсчета и группировки операций по категориям"""
-    return Counter([item for item in transaction_descriptions(data) if any(cat in item for cat in categories)])
+    return Counter([item for item in list(transaction_descriptions(data)) if item is not None and any(cat in item for cat in categories)])
 
 
 
